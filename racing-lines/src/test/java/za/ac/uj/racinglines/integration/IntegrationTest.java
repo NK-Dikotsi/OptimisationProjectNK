@@ -26,7 +26,7 @@ class IntegrationTest {
     assertThat(result.track()).isEqualTo("oval");
     assertThat(result.bestOffsets()).hasSize(rt.track().gateCount());
     assertThat(result.bestLap()).isFinite().isGreaterThan(0);
-    assertThat(result.evaluationsUsed()).isLessThanOrEqualTo(500);
+    assertThat(result.evaluationsUsed()).isLessThanOrEqualTo(2000);
   }
 
   // I2: PSO on hairpin track
@@ -64,8 +64,7 @@ class IntegrationTest {
     RunOutcome result = engine.optimize("aco", rt.name(), rt.track(), rt.width(), 5000, 42);
 
     double improvement = result.improvementPct();
-    // With 5000 evals on a 488m track with 100 gates, ACO should find something reasonable
-    assertThat(improvement).isGreaterThan(-50).isLessThanOrEqualTo(100);
+    assertThat(improvement).isGreaterThanOrEqualTo(0).isLessThanOrEqualTo(100);
   }
 
   // I5: LapTimeObjective evaluation

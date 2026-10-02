@@ -45,7 +45,8 @@ class RealPipelineTest {
     RaceTracks.RaceTrack rt = RaceTracks.byName("oval");
     RunOutcome out = engine.optimize(algorithm, rt.name(), rt.track(), rt.width(), 5_000, 42);
 
-    assertThat(out.bestLap()).isFinite().isGreaterThan(0);
+    // A real optimiser never reports a line slower than the centreline it could have chosen.
+    assertThat(out.bestLap()).isLessThanOrEqualTo(out.baselineLap() + 1e-9);
     assertThat(out.evaluationsUsed()).isPositive().isLessThanOrEqualTo(5_000);
     assertThat(out.evalsTo1Pct()).isPositive().isLessThanOrEqualTo(out.evaluationsUsed());
     assertThat(out.history()).isNotEmpty();

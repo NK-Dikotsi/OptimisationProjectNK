@@ -40,10 +40,12 @@ public class OptimizationEngine {
       double inertia,
       double c1,
       double c2,
-      double vmaxFractionOfWidth) {
+      double vmaxFractionOfWidth,
+      int controlPoints) {
 
     public static Params defaults() {
-      return new Params(20, 11, 1.0, 2.0, 0.1, 0.05, 0.3, 0.7298, 1.49618, 1.49618, 0.2);
+      // 20 control points: one every ~25 m on a 500 m track, splined to all 100 gates.
+      return new Params(20, 11, 1.0, 2.0, 0.1, 0.05, 0.3, 0.7298, 1.49618, 1.49618, 0.2, 20);
     }
   }
 
@@ -57,7 +59,8 @@ public class OptimizationEngine {
 
   public RunOutcome optimize(String algorithm, String trackName, Track track, double trackWidth,
       long budget, long seed) {
-    LapTimeObjective lapTime = new LapTimeObjective(track, simulator, trackWidth);
+    LapTimeObjective lapTime =
+        new LapTimeObjective(track, simulator, trackWidth, params.controlPoints());
     double baseline = lapTime.baseline();
     Random random = new Random(seed);
 
@@ -140,7 +143,8 @@ public class OptimizationEngine {
       throw new IllegalStateException(algorithm + " returned no convergence history");
     }
     long evalsTo1Pct = RunOutcome.evalsTo1Pct(history, bestLap);
-    return new RunOutcome(algorithm, trackName, bestLap, baseline, best,
+    // Report the line per gate (spline-expanded), so best_line.csv can be plotted directly.
+    return new RunOutcome(algorithm, trackName, bestLap, baseline, lapTime.toGateOffsets(best),
         lapTime.evaluationsUsed(), evalsTo1Pct, history);
   }
 
