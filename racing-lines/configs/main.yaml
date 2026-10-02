@@ -1,6 +1,6 @@
 experiment:
   base_seed: 12345
-  budget: 10000
+  budget: 20000
 
 algorithms:
   - aco
