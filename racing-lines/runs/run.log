@@ -1,0 +1,271 @@
+19:04:23.930 [main] WARN  za.ac.uj.racinglines.track.Track - offsets_clamped: 500 violations
+19:05:38.937 [main] WARN  za.ac.uj.racinglines.track.Track - offsets_clamped: 500 violations
+19:06:53.069 [main] WARN  za.ac.uj.racinglines.track.Track - offsets_clamped: 500 violations
+20:59:21.501 [main] ERROR za.ac.uj.racinglines.Main - Fatal error
+java.io.IOException: Config file not found: configs\main.yaml
+	at za.ac.uj.racinglines.Main.handleExperiment(Main.java:58)
+	at za.ac.uj.racinglines.Main.main(Main.java:29)
+20:59:58.502 [main] INFO  za.ac.uj.racinglines.Main - Starting experiment with config: configs\main.yaml
+20:59:58.504 [main] INFO  za.ac.uj.racinglines.Main - Workers: 2, Algorithms: 3, Tracks: 3, Seeds: 2
+20:59:58.510 [main] INFO  z.a.u.r.experiment.ExperimentRunner - Batch start
+20:59:58.513 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:58.513 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:58.632 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:58.632 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:58.633 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:58.633 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:58.738 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:58.738 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:58.739 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:58.739 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:58.847 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:58.847 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:58.849 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:58.849 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:58.956 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:58.956 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:58.957 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:58.958 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:59.065 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:59.065 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:59.066 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:59.066 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:59.173 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:59.173 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:59.175 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:59.175 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:59.283 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:59.283 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:59.283 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:59.283 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:59.392 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:59.392 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:59.393 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:59.395 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+20:59:59.501 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:59.501 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+20:59:59.502 [main] INFO  z.a.u.r.experiment.ExperimentRunner - Batch end
+20:59:59.505 [main] INFO  za.ac.uj.racinglines.Main - Experiment completed successfully
+21:00:26.061 [main] ERROR za.ac.uj.racinglines.Main - Fatal error
+java.nio.file.InvalidPathException: Illegal char <<> at index 14: runs/_batches/<batch_id>
+	at java.base/sun.nio.fs.WindowsPathParser.normalize(WindowsPathParser.java:204)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:175)
+	at java.base/sun.nio.fs.WindowsPathParser.parse(WindowsPathParser.java:77)
+	at java.base/sun.nio.fs.WindowsPath.parse(WindowsPath.java:92)
+	at java.base/sun.nio.fs.WindowsFileSystem.getPath(WindowsFileSystem.java:231)
+	at java.base/java.nio.file.Path.of(Path.java:148)
+	at java.base/java.nio.file.Paths.get(Paths.java:69)
+	at za.ac.uj.racinglines.Main.handleAnalysis(Main.java:88)
+	at za.ac.uj.racinglines.Main.main(Main.java:32)
+21:03:31.919 [main] INFO  za.ac.uj.racinglines.Main - Starting analysis from batch: runs\_batches\20261002_205958
+21:03:31.920 [main] INFO  za.ac.uj.racinglines.Main - Output directory: paper\figures
+21:03:31.935 [main] INFO  z.a.u.r.analysis.ResultsAnalyzer - Analysis start
+21:03:31.953 [main] INFO  z.a.u.r.analysis.ResultsAnalyzer - Analysis end
+21:03:31.953 [main] INFO  za.ac.uj.racinglines.Main - Analysis completed successfully
+21:03:31.953 [main] INFO  za.ac.uj.racinglines.Main - Results written to: paper\figures
+21:09:23.457 [main] INFO  za.ac.uj.racinglines.Main - Starting experiment with config: configs\main.yaml
+21:09:23.459 [main] INFO  za.ac.uj.racinglines.Main - Workers: 4, Algorithms: 3, Tracks: 3, Seeds: 10
+21:09:23.467 [main] INFO  z.a.u.r.experiment.ExperimentRunner - Batch start1
+21:09:23.472 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.472 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.475 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.475 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.573 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.575 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.575 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.575 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.575 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.576 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.584 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.585 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.677 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.677 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.677 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.679 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.679 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.679 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.693 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.695 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.787 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.787 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.787 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.788 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.789 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.789 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.802 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.802 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.895 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.895 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.895 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.896 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.899 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.899 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:23.910 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:23.911 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.003 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.003 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.003 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.006 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.006 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.006 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.018 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.019 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.111 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.111 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.112 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.113 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.113 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.114 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.127 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.128 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.219 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.219 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.219 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.220 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.221 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.221 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.234 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.235 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.327 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.327 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.327 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.329 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.330 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.330 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.342 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.345 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.435 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.435 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.435 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.437 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.437 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.437 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.451 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.452 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.544 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.544 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.544 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.546 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.546 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.546 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.560 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.562 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.652 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.652 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.652 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.655 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.656 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.656 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.668 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.669 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.763 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.763 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.763 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.765 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.765 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.765 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.778 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.779 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.873 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.873 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.873 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.874 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.875 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.875 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.889 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.890 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.983 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.983 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.983 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:24.985 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.985 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:24.985 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.000 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.000 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.093 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.093 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.093 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.096 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.096 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.098 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.109 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.110 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.201 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.201 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.201 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.203 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.203 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.203 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.216 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.217 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.310 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.310 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.310 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.311 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.311 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.312 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.325 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.326 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.419 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.419 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.419 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.420 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.420 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.421 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.434 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.435 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.528 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.528 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.528 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.530 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.530 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.530 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.544 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.545 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.639 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.639 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.639 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.641 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.641 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.641 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.654 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.655 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.748 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.748 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.748 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.748 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.749 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.749 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.764 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.764 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.857 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.857 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.857 [pool-1-thread-3] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.858 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.858 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run started
+21:09:25.872 [pool-1-thread-2] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.965 [pool-1-thread-4] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.965 [pool-1-thread-1] INFO  z.a.u.r.experiment.ExperimentRunner - Run finished
+21:09:25.965 [main] INFO  z.a.u.r.experiment.ExperimentRunner - Batch end
+21:09:25.971 [main] INFO  za.ac.uj.racinglines.Main - Experiment completed successfully
+21:10:20.469 [main] INFO  za.ac.uj.racinglines.Main - Starting analysis from batch: runs\_batches\20261002_210923
+21:10:20.470 [main] INFO  za.ac.uj.racinglines.Main - Output directory: paper\figures
+21:10:20.486 [main] INFO  z.a.u.r.analysis.ResultsAnalyzer - Analysis start
+21:10:20.491 [main] ERROR za.ac.uj.racinglines.Main - Fatal error
+java.nio.file.FileAlreadyExistsException: paper\figures\track_road.pdf
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:87)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+	at java.base/java.nio.file.Files.createFile(Files.java:658)
+	at za.ac.uj.racinglines.analysis.PlotGenerator.generateTrackPlots(PlotGenerator.java:16)
+	at za.ac.uj.racinglines.analysis.ResultsAnalyzer.analyze(ResultsAnalyzer.java:43)
+	at za.ac.uj.racinglines.Main.handleAnalysis(Main.java:104)
+	at za.ac.uj.racinglines.Main.main(Main.java:32)
+21:11:03.981 [main] INFO  za.ac.uj.racinglines.Main - Starting analysis from batch: runs\_batches\20261002_210923
+21:11:03.983 [main] INFO  za.ac.uj.racinglines.Main - Output directory: paper\figures
+21:11:03.987 [main] INFO  z.a.u.r.analysis.ResultsAnalyzer - Analysis start
+21:11:04.001 [main] INFO  z.a.u.r.analysis.ResultsAnalyzer - Analysis end
+21:11:04.001 [main] INFO  za.ac.uj.racinglines.Main - Analysis completed successfully
+21:11:04.001 [main] INFO  za.ac.uj.racinglines.Main - Results written to: paper\figures

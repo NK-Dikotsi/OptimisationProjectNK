@@ -1,0 +1,25 @@
+experiment:
+  base_seed: 12345
+  budget: 10000
+
+algorithms:
+  - aco
+  - pso
+  - adaptive_evaporation
+
+tracks:
+  - oval
+  - hairpin
+  - chicane
+
+seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+  - 47
+  - 48
+  - 49
+  - 50
+  - 51

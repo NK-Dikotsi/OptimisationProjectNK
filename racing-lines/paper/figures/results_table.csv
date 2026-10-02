@@ -1,0 +1,10 @@
+algorithm,track,mean,std,best,worst
+pso,tight,53,90,2,59,50,00,58,00
+adaptive,evaporation,54,90,2,47,51,00,58,00
+aco,road,54,10,3,33,50,00,59,00
+aco,oval,53,50,2,38,51,00,58,00
+pso,road,54,90,2,84,50,00,59,00
+adaptive,evaporation,53,10,2,26,50,00,58,00
+aco,tight,54,70,2,65,50,00,58,00
+pso,oval,54,90,3,30,50,00,59,00
+adaptive,evaporation,53,40,2,54,50,00,58,00

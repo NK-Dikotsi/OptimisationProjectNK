@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <!-- Test config: console only, WARN level to suppress startup noise -->
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="WARN">
+    <appender-ref ref="CONSOLE"/>
+  </root>
+
+  <!-- Allow DEBUG for specific test loggers -->
+  <logger name="za.ac.uj.racinglines.track" level="DEBUG"/>
+</configuration>
