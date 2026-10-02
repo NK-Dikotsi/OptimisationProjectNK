@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: za.ac.uj.racinglines.aco.variant.AdaptiveEvaporationOptimizerTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s -- in za.ac.uj.racinglines.aco.variant.AdaptiveEvaporationOptimizerTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s -- in za.ac.uj.racinglines.aco.variant.AdaptiveEvaporationOptimizerTest

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: za.ac.uj.racinglines.integration.RealPipelineTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.075 s -- in za.ac.uj.racinglines.integration.RealPipelineTest
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.379 s -- in za.ac.uj.racinglines.integration.RealPipelineTest

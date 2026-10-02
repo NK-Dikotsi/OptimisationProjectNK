@@ -110,20 +110,22 @@ public class AdaptiveEvaporationOptimizer {
         logger.debug("Tau bound hit", kv("count", tauBoundHits));
       }
 
-      for (int ant = 0; ant < config.getNumAnts(); ant++) {
-        depositPheromone(tau, antLines[ant], antLaps[ant], config.getQ(),
-                        config.getTauMin(), config.getTauMax());
-      }
-
+      // Calculate iteration best lap and mean lap first
       double iterationBestLap = Double.POSITIVE_INFINITY;
+      int bestAntThisIteration = -1;
       double meanLap = 0.0;
       for (int ant = 0; ant < config.getNumAnts(); ant++) {
         if (antLaps[ant] < iterationBestLap) {
           iterationBestLap = antLaps[ant];
+          bestAntThisIteration = ant;
         }
         meanLap += antLaps[ant];
       }
       meanLap /= config.getNumAnts();
+
+      // MAX-MIN Ant System: only the iteration best ant deposits pheromone
+      depositPheromone(tau, antLines[bestAntThisIteration], antLaps[bestAntThisIteration],
+          config.getQ(), config.getTauMin(), config.getTauMax());
 
       double entropy = calculatePheromoneEntropy(tau, numGates, numNodes);
 
@@ -134,7 +136,7 @@ public class AdaptiveEvaporationOptimizer {
       currentRho = Math.max(config.getRhoMin(), Math.min(config.getRhoMax(), currentRho));
 
       if (previousRho != currentRho) {
-        logger.debug("Rho update", kv("iter", iteration),
+        logger.info("rho_update", kv("iter", iteration),
             kv("entropy", entropy),
             kv("prev_rho", previousRho),
             kv("new_rho", currentRho));
@@ -152,7 +154,7 @@ public class AdaptiveEvaporationOptimizer {
       history.add(new AcoResult.IterationSnapshot(iteration, evaluations, bestLap,
           iterationBestLap, meanLap, entropy, tauMinVal, tauMaxVal));
 
-      logger.info("Iteration end", kv("iter", iteration), kv("evals", evaluations),
+      logger.info("iteration_end", kv("iter", iteration), kv("evals", evaluations),
           kv("best_lap", bestLap), kv("iter_best_lap", iterationBestLap),
           kv("mean_lap", meanLap), kv("entropy", entropy),
           kv("tau_min", tauMinVal), kv("tau_max", tauMaxVal),

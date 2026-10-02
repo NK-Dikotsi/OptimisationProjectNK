@@ -5,9 +5,7 @@ za\ac\uj\racinglines\experiment\ExperimentRunner.class
 za\ac\uj\racinglines\track\TrackLoader$2.class
 za\ac\uj\racinglines\util\GitInfo.class
 za\ac\uj\racinglines\integration\RaceTracks$RaceTrack.class
-za\ac\uj\racinglines\integration\TrackLineObjective.class
 za\ac\uj\racinglines\pso\PsoResult.class
-za\ac\uj\racinglines\track\TightTrack.class
 za\ac\uj\racinglines\config\YamlConfigLoader.class
 za\ac\uj\racinglines\integration\RunOutcome.class
 za\ac\uj\racinglines\analysis\StatisticalTests.class
@@ -20,7 +18,6 @@ za\ac\uj\racinglines\pso\Objective.class
 za\ac\uj\racinglines\physics\LapTimeSimulator.class
 za\ac\uj\racinglines\aco\AcoResult$IterationSnapshot.class
 za\ac\uj\racinglines\track\Gate.class
-za\ac\uj\racinglines\track\OvalTrack.class
 za\ac\uj\racinglines\track\TrackLoader$1.class
 za\ac\uj\racinglines\analysis\ResultRow$ResultRowBuilder.class
 za\ac\uj\racinglines\pso\PsoResult$IterationSnapshot.class
@@ -31,7 +28,6 @@ za\ac\uj\racinglines\analysis\ConvergenceInterpolator.class
 za\ac\uj\racinglines\aco\variant\AdaptiveEvaporationOptimizer.class
 za\ac\uj\racinglines\pso\PsoResult$Builder.class
 za\ac\uj\racinglines\track\TrackFactory.class
-za\ac\uj\racinglines\track\Centreline$CentrelineData.class
 za\ac\uj\racinglines\integration\RunOutcome$Point.class
 za\ac\uj\racinglines\aco\variant\AdaptiveEvaporationConfig.class
 za\ac\uj\racinglines\Main.class
@@ -39,9 +35,6 @@ za\ac\uj\racinglines\track\Track.class
 za\ac\uj\racinglines\track\TrackLoader.class
 za\ac\uj\racinglines\integration\OptimizationResult$OptimizationResultBuilder.class
 za\ac\uj\racinglines\pso\ParticleSwarmOptimizer.class
-za\ac\uj\racinglines\track\RacingTrack.class
-za\ac\uj\racinglines\track\RoadTrack.class
-za\ac\uj\racinglines\integration\RacingLineObjective.class
 za\ac\uj\racinglines\integration\RaceTracks.class
 za\ac\uj\racinglines\physics\PhysicsConfig.class
 za\ac\uj\racinglines\aco\AntColonyOptimizer.class
@@ -50,7 +43,6 @@ za\ac\uj\racinglines\integration\NodeLapTimeObjective.class
 za\ac\uj\racinglines\aco\AcoResult.class
 za\ac\uj\racinglines\pso\PsoConfig.class
 za\ac\uj\racinglines\integration\OptimizationEngine.class
-za\ac\uj\racinglines\track\Centreline.class
 za\ac\uj\racinglines\integration\OptimizationResult.class
 za\ac\uj\racinglines\analysis\SummaryStats$SummaryStatsBuilder.class
 za\ac\uj\racinglines\integration\LapTimeObjective.class

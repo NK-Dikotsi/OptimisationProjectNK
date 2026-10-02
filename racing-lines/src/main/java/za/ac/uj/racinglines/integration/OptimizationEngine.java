@@ -103,22 +103,23 @@ public class OptimizationEngine {
   private RunOutcome runAco(String trackName, LapTimeObjective lapTime, double baseline,
       long budget, Random random, boolean adaptive) {
     NodeLapTimeObjective nodes = new NodeLapTimeObjective(lapTime, params.acoNodes());
-    // Q = baseline lap, so a deposit Q / lap is about 1, the same scale as tau0 = 1.
-    // With Q = 1 a 60 s lap would deposit only ~0.017 and pheromone would barely change.
+    // MAX-MIN bounds: ratio of 100 allows adaptive evaporation to have meaningful room to act.
     double q = baseline;
-    double tau0 = 1.0;
+    double tauMax = 10.0;
+    double tauMin = 0.1;
+    double tau0 = tauMax;
 
     AcoResult result;
     String name;
     if (adaptive) {
       AdaptiveEvaporationConfig config = new AdaptiveEvaporationConfig(params.population(),
           params.acoNodes(), params.alpha(), params.beta(), params.rhoMin(), params.rhoMax(),
-          q, tau0, budget);
+          q, tau0, tauMin, tauMax, budget);
       result = new AdaptiveEvaporationOptimizer(config, random).optimize(nodes);
       name = "adaptive_evaporation";
     } else {
       AcoConfig config = new AcoConfig(params.population(), params.acoNodes(), params.alpha(),
-          params.beta(), params.rho(), q, tau0, budget);
+          params.beta(), params.rho(), q, tau0, tauMin, tauMax, budget);
       result = new AntColonyOptimizer(config, random).optimize(nodes);
       name = "aco";
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="za.ac.uj.racinglines.integration.RealPipelineTest" time="1.075" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="za.ac.uj.racinglines.integration.RealPipelineTest" time="0.379" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,8 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ZA"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-21.0.11.10-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\ntsane.dikotsi\AppData\Local\Temp\surefire2487711568233443475\surefirebooter-20261002214412683_3.jar C:\Users\ntsane.dikotsi\AppData\Local\Temp\surefire2487711568233443475 2026-10-02T21-44-12_589-jvmRun1 surefire-20261002214412683_1tmp surefire_0-20261002214412683_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\ntsane.dikotsi\AppData\Local\Temp\surefire7606285196037785669\surefirebooter-20261002215541036_3.jar C:\Users\ntsane.dikotsi\AppData\Local\Temp\surefire7606285196037785669 2026-10-02T21-55-40_945-jvmRun1 surefire-20261002215541036_1tmp surefire_0-20261002215541036_2tmp"/>
     <property name="jdk.debug" value="release"/>
+    <property name="test" value="RealPipelineTest#bestNoWorseThanBaseline"/>
     <property name="surefire.test.class.path" value="C:\Documents-Honours\OptimisationProjectNK\racing-lines\target\test-classes;C:\Documents-Honours\OptimisationProjectNK\racing-lines\target\classes;C:\Users\ntsane.dikotsi\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\yaml\snakeyaml\2.0\snakeyaml-2.0.jar;C:\Users\ntsane.dikotsi\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.3\jackson-databind-2.15.3.jar;C:\Users\ntsane.dikotsi\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.3\jackson-annotations-2.15.3.jar;C:\Users\ntsane.dikotsi\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.3\jackson-core-2.15.3.jar;C:\Users\ntsane.dikotsi\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.15.3\jackson-dataformat-yaml-2.15.3.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\ntsane.dikotsi\.m2\repository\ch\qos\logback\logback-classic\1.4.11\logback-classic-1.4.11.jar;C:\Users\ntsane.dikotsi\.m2\repository\ch\qos\logback\logback-core\1.4.11\logback-core-1.4.11.jar;C:\Users\ntsane.dikotsi\.m2\repository\net\logstash\logback\logstash-logback-encoder\7.4\logstash-logback-encoder-7.4.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\apache\commons\commons-csv\1.10.0\commons-csv-1.10.0.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\knowm\xchart\xchart\3.8.7\xchart-3.8.7.jar;C:\Users\ntsane.dikotsi\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\ntsane.dikotsi\.m2\repository\de\rototor\pdfbox\graphics2d\3.0.1\graphics2d-3.0.1.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\apache\pdfbox\pdfbox\3.0.1\pdfbox-3.0.1.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\apache\pdfbox\pdfbox-io\3.0.1\pdfbox-io-3.0.1.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\apache\pdfbox\fontbox\3.0.1\fontbox-3.0.1.jar;C:\Users\ntsane.dikotsi\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\ntsane.dikotsi\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.3\junit-jupiter-5.9.3.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.3\junit-jupiter-params-5.9.3.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\assertj\assertj-core\3.24.1\assertj-core-3.24.1.jar;C:\Users\ntsane.dikotsi\.m2\repository\net\bytebuddy\byte-buddy\1.12.21\byte-buddy-1.12.21.jar;C:\Users\ntsane.dikotsi\.m2\repository\net\jqwik\jqwik\1.8.0\jqwik-1.8.0.jar;C:\Users\ntsane.dikotsi\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\ntsane.dikotsi\.m2\repository\net\jqwik\jqwik-api\1.8.0\jqwik-api-1.8.0.jar;C:\Users\ntsane.dikotsi\.m2\repository\net\jqwik\jqwik-web\1.8.0\jqwik-web-1.8.0.jar;C:\Users\ntsane.dikotsi\.m2\repository\net\jqwik\jqwik-time\1.8.0\jqwik-time-1.8.0.jar;C:\Users\ntsane.dikotsi\.m2\repository\net\jqwik\jqwik-engine\1.8.0\jqwik-engine-1.8.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\ntsane.dikotsi"/>
@@ -30,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\ntsane.dikotsi\AppData\Local\Temp\surefire2487711568233443475\surefirebooter-20261002214412683_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\ntsane.dikotsi\AppData\Local\Temp\surefire7606285196037785669\surefirebooter-20261002215541036_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.11+10-LTS"/>
@@ -59,47 +60,19 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="reproducible" classname="za.ac.uj.racinglines.integration.RealPipelineTest" time="0.114">
-    <system-out><![CDATA[21:44:14.292 [main] DEBUG za.ac.uj.racinglines.track.Track - track_resampled
-21:44:14.293 [main] INFO  za.ac.uj.racinglines.track.Track - track_loaded
+  <testcase name="bestNoWorseThanBaseline(String)[1]" classname="za.ac.uj.racinglines.integration.RealPipelineTest" time="0.12">
+    <system-out><![CDATA[21:55:41.633 [main] DEBUG za.ac.uj.racinglines.track.Track - track_resampled
+21:55:41.635 [main] INFO  za.ac.uj.racinglines.track.Track - track_loaded
 ]]></system-out>
   </testcase>
-  <testcase name="bestNoWorseThanBaseline(String)[1]" classname="za.ac.uj.racinglines.integration.RealPipelineTest" time="0.052">
-    <system-out><![CDATA[21:44:14.431 [main] DEBUG za.ac.uj.racinglines.track.Track - track_resampled
-21:44:14.431 [main] INFO  za.ac.uj.racinglines.track.Track - track_loaded
+  <testcase name="bestNoWorseThanBaseline(String)[2]" classname="za.ac.uj.racinglines.integration.RealPipelineTest" time="0.055">
+    <system-out><![CDATA[21:55:41.734 [main] DEBUG za.ac.uj.racinglines.track.Track - track_resampled
+21:55:41.734 [main] INFO  za.ac.uj.racinglines.track.Track - track_loaded
 ]]></system-out>
   </testcase>
-  <testcase name="bestNoWorseThanBaseline(String)[2]" classname="za.ac.uj.racinglines.integration.RealPipelineTest" time="0.042">
-    <system-out><![CDATA[21:44:14.476 [main] DEBUG za.ac.uj.racinglines.track.Track - track_resampled
-21:44:14.477 [main] INFO  za.ac.uj.racinglines.track.Track - track_loaded
-]]></system-out>
-  </testcase>
-  <testcase name="bestNoWorseThanBaseline(String)[3]" classname="za.ac.uj.racinglines.integration.RealPipelineTest" time="0.045">
-    <system-out><![CDATA[21:44:14.519 [main] DEBUG za.ac.uj.racinglines.track.Track - track_resampled
-21:44:14.520 [main] INFO  za.ac.uj.racinglines.track.Track - track_loaded
-]]></system-out>
-  </testcase>
-  <testcase name="evalsTo1Pct" classname="za.ac.uj.racinglines.integration.RealPipelineTest" time="0.0"/>
-  <testcase name="moreBudgetHelps" classname="za.ac.uj.racinglines.integration.RealPipelineTest" time="0.798">
-    <system-out><![CDATA[21:44:14.566 [main] DEBUG za.ac.uj.racinglines.track.Track - track_resampled
-21:44:14.566 [main] INFO  za.ac.uj.racinglines.track.Track - track_loaded
-]]></system-out>
-  </testcase>
-  <testcase name="baselinesDiffer" classname="za.ac.uj.racinglines.integration.RealPipelineTest" time="0.001">
-    <system-out><![CDATA[21:44:15.364 [main] DEBUG za.ac.uj.racinglines.track.Track - track_resampled
-21:44:15.365 [main] INFO  za.ac.uj.racinglines.track.Track - track_loaded
-Centreline lap oval     12,307 s
-21:44:15.365 [main] DEBUG za.ac.uj.racinglines.track.Track - track_resampled
-21:44:15.365 [main] INFO  za.ac.uj.racinglines.track.Track - track_loaded
-Centreline lap hairpin  11,590 s
-21:44:15.365 [main] DEBUG za.ac.uj.racinglines.track.Track - track_resampled
-21:44:15.365 [main] INFO  za.ac.uj.racinglines.track.Track - track_loaded
-Centreline lap chicane  17,217 s
-]]></system-out>
-  </testcase>
-  <testcase name="nodeMapping" classname="za.ac.uj.racinglines.integration.RealPipelineTest" time="0.001">
-    <system-out><![CDATA[21:44:15.366 [main] DEBUG za.ac.uj.racinglines.track.Track - track_resampled
-21:44:15.366 [main] INFO  za.ac.uj.racinglines.track.Track - track_loaded
+  <testcase name="bestNoWorseThanBaseline(String)[3]" classname="za.ac.uj.racinglines.integration.RealPipelineTest" time="0.055">
+    <system-out><![CDATA[21:55:41.791 [main] DEBUG za.ac.uj.racinglines.track.Track - track_resampled
+21:55:41.791 [main] INFO  za.ac.uj.racinglines.track.Track - track_loaded
 ]]></system-out>
   </testcase>
 </testsuite>

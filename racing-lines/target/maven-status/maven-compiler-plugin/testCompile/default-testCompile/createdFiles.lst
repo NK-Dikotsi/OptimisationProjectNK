@@ -9,9 +9,7 @@ za\ac\uj\racinglines\fixtures\Tracks$ChicaneTrack.class
 za\ac\uj\racinglines\fixtures\Pso$SphereObjective.class
 za\ac\uj\racinglines\fixtures\Tracks.class
 za\ac\uj\racinglines\fixtures\Tracks$HairpinTrack.class
-za\ac\uj\racinglines\track\CentrelineTest.class
 za\ac\uj\racinglines\track\TrackTest.class
-za\ac\uj\racinglines\experiment\P6CentrelineTest.class
 za\ac\uj\racinglines\fixtures\Pso.class
 za\ac\uj\racinglines\integration\RealPipelineTest.class
 za\ac\uj\racinglines\aco\AntColonyOptimizerTest.class

@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: za.ac.uj.racinglines.experiment.P6CentrelineTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.089 s -- in za.ac.uj.racinglines.experiment.P6CentrelineTest
