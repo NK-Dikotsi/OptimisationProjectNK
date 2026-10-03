@@ -39,7 +39,7 @@ class RealPipelineTest {
   }
 
   @ParameterizedTest
-  @ValueSource(strings = {"pso", "aco", "adaptive_evaporation"})
+  @ValueSource(strings = {"pso", "aco", "adaptive_evaporation", "adaptive_evaporation_inv"})
   @DisplayName("R2 every algorithm reports a real, verified lap no worse than the centreline")
   void bestNoWorseThanBaseline(String algorithm) {
     RaceTracks.RaceTrack rt = RaceTracks.byName("oval");

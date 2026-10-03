@@ -69,8 +69,11 @@ public class OptimizationEngine {
 
     RunOutcome outcome = switch (algorithm) {
       case "pso" -> runPso(trackName, lapTime, baseline, budget, random);
-      case "aco" -> runAco(trackName, lapTime, baseline, budget, random, false);
-      case "adaptive_evaporation" -> runAco(trackName, lapTime, baseline, budget, random, true);
+      case "aco" -> runAco(trackName, lapTime, baseline, budget, random, null);
+      case "adaptive_evaporation" -> runAco(trackName, lapTime, baseline, budget, random,
+          AdaptiveEvaporationConfig.RhoRule.RAISE_WHEN_CONVERGED);
+      case "adaptive_evaporation_inv" -> runAco(trackName, lapTime, baseline, budget, random,
+          AdaptiveEvaporationConfig.RhoRule.LOWER_WHEN_CONVERGED);
       default -> throw new IllegalArgumentException("Unknown algorithm: " + algorithm);
     };
 
@@ -104,7 +107,8 @@ public class OptimizationEngine {
   }
 
   private RunOutcome runAco(String trackName, LapTimeObjective lapTime, double baseline,
-      long budget, Random random, boolean adaptive) {
+      long budget, Random random, AdaptiveEvaporationConfig.RhoRule rule) {
+    boolean adaptive = rule != null;
     NodeLapTimeObjective nodes = new NodeLapTimeObjective(lapTime, params.acoNodes());
     // MAX-MIN bounds: ratio of 100 allows adaptive evaporation to have meaningful room to act.
     double q = baseline;
@@ -117,9 +121,10 @@ public class OptimizationEngine {
     if (adaptive) {
       AdaptiveEvaporationConfig config = new AdaptiveEvaporationConfig(params.population(),
           params.acoNodes(), params.alpha(), params.beta(), params.rhoMin(), params.rhoMax(),
-          q, tau0, tauMin, tauMax, budget);
+          q, tau0, tauMin, tauMax, budget, rule);
       result = new AdaptiveEvaporationOptimizer(config, random).optimize(nodes);
-      name = "adaptive_evaporation";
+      name = rule == AdaptiveEvaporationConfig.RhoRule.RAISE_WHEN_CONVERGED
+          ? "adaptive_evaporation" : "adaptive_evaporation_inv";
     } else {
       AcoConfig config = new AcoConfig(params.population(), params.acoNodes(), params.alpha(),
           params.beta(), params.rho(), q, tau0, tauMin, tauMax, budget);

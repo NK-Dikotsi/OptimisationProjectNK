@@ -29,7 +29,7 @@ public class ExperimentConfig {
       throw new IllegalArgumentException("At least one seed required");
     }
     for (String algo : algorithms) {
-      if (!algo.matches("^(aco|pso|adaptive_evaporation)$")) {
+      if (!algo.matches("^(aco|pso|adaptive_evaporation|adaptive_evaporation_inv)$")) {
         throw new IllegalArgumentException("Unknown algorithm: " + algo);
       }
     }

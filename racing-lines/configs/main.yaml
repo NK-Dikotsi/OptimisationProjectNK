@@ -6,6 +6,7 @@ algorithms:
   - aco
   - pso
   - adaptive_evaporation
+  - adaptive_evaporation_inv
 
 tracks:
   - oval

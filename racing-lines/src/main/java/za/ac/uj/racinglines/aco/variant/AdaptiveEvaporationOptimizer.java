@@ -48,6 +48,7 @@ public class AdaptiveEvaporationOptimizer {
     double currentRho = (config.getRhoMin() + config.getRhoMax()) / 2;
 
     logger.info("Variant config", kv("option", "adaptive_evaporation"),
+        kv("rule", config.getRule()),
         kv("rho_min", config.getRhoMin()), kv("rho_max", config.getRhoMax()),
         kv("ants", config.getNumAnts()), kv("K", config.getNumNodes()),
         kv("alpha", config.getAlpha()), kv("beta", config.getBeta()),
@@ -129,11 +130,11 @@ public class AdaptiveEvaporationOptimizer {
 
       double entropy = calculatePheromoneEntropy(tau, numGates, numNodes);
 
-      // Adaptive evaporation: when entropy is low, increase rho; when high, decrease rho
+      // Adaptive evaporation: rho follows pheromone entropy, in the direction set by the rule.
       double normalizedEntropy = entropy / maxEntropy;
       double previousRho = currentRho;
-      currentRho = config.getRhoMin() + (config.getRhoMax() - config.getRhoMin()) * (1.0 - normalizedEntropy);
-      currentRho = Math.max(config.getRhoMin(), Math.min(config.getRhoMax(), currentRho));
+      currentRho = nextRho(config.getRhoMin(), config.getRhoMax(), normalizedEntropy,
+          config.getRule());
 
       if (previousRho != currentRho) {
         logger.info("rho_update", kv("iter", iteration),
@@ -265,5 +266,22 @@ public class AdaptiveEvaporationOptimizer {
     }
 
     return totalEntropy / numGates;
+  }
+
+  /**
+   * Evaporation rate for the next iteration.
+   *
+   * <p>c = 1 - normalizedEntropy is the colony's convergence (0 = all nodes equally likely,
+   * 1 = one node per gate). RAISE_WHEN_CONVERGED: rho = rhoMin + (rhoMax - rhoMin) * c.
+   * LOWER_WHEN_CONVERGED: rho = rhoMax - (rhoMax - rhoMin) * c. Always clamped to the bounds.
+   */
+  static double nextRho(double rhoMin, double rhoMax, double normalizedEntropy,
+      AdaptiveEvaporationConfig.RhoRule rule) {
+    double c = 1.0 - Math.max(0.0, Math.min(1.0, normalizedEntropy));
+    double rho = switch (rule) {
+      case RAISE_WHEN_CONVERGED -> rhoMin + (rhoMax - rhoMin) * c;
+      case LOWER_WHEN_CONVERGED -> rhoMax - (rhoMax - rhoMin) * c;
+    };
+    return Math.max(rhoMin, Math.min(rhoMax, rho));
   }
 }
