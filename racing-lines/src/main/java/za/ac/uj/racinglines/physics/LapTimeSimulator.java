@@ -90,51 +90,43 @@ public class LapTimeSimulator {
   }
 
   /**
-   * Compute speed profile through the line using forward and backward passes.
-   * Iterates until convergence.
+   * Speed at each point of a closed line, limited by cornering friction (vmax), acceleration
+   * and braking.
+   *
+   * <p>Starts from vmax and only ever lowers speeds. A forward pass applies the acceleration
+   * limit and a backward pass the braking limit. Both start at the slowest point and go two
+   * laps, so the profile is consistent across the start/finish wrap. Lowering a speed in the
+   * braking pass can never break the acceleration limit, so one pass of each is exact.
    */
   public double[] speedProfile(double[] vmax, double[] segmentLengths) {
     int n = vmax.length;
-    double[] v = new double[n];
+    double[] v = vmax.clone();
 
-    // Start from the slowest corner to ensure closure
-    int slowestIdx = 0;
+    int start = 0;
     for (int i = 1; i < n; i++) {
-      if (vmax[i] < vmax[slowestIdx]) {
-        slowestIdx = i;
+      if (vmax[i] < vmax[start]) {
+        start = i;
       }
     }
-    v[slowestIdx] = vmax[slowestIdx];
 
-    // Iterate forward and backward passes until convergence
-    boolean converged = false;
-    int maxIter = 100;
-    int iter = 0;
-
-    while (!converged && iter < maxIter) {
-      iter++;
-      converged = true;
-
-      // Forward pass
-      for (int i = 0; i < n; i++) {
-        int next = (i + 1) % n;
-        double vNextMax = Math.sqrt(v[i]*v[i] + 2.0 * config.getAacc() * segmentLengths[i]);
-        double vNew = Math.min(vmax[next], vNextMax);
-        if (Math.abs(vNew - v[next]) > 1e-8) {
-          converged = false;
-        }
-        v[next] = vNew;
+    // Forward: from point i the car can reach at most sqrt(v_i^2 + 2 a_acc s_i) at i+1.
+    for (int k = 0; k < 2 * n; k++) {
+      int i = (start + k) % n;
+      int next = (i + 1) % n;
+      double reachable = Math.sqrt(v[i] * v[i] + 2.0 * config.getAacc() * segmentLengths[i]);
+      if (reachable < v[next]) {
+        v[next] = reachable;
       }
+    }
 
-      // Backward pass
-      for (int i = n - 1; i >= 0; i--) {
-        int next = (i + 1) % n;
-        double vPrevMax = Math.sqrt(v[next]*v[next] + 2.0 * config.getAbrake() * segmentLengths[i]);
-        double vNew = Math.min(vmax[i], vPrevMax);
-        if (Math.abs(vNew - v[i]) > 1e-8) {
-          converged = false;
-        }
-        v[i] = vNew;
+    // Backward: to be at v_{i+1} at point i+1, the car can be at most
+    // sqrt(v_{i+1}^2 + 2 a_brake s_i) at point i.
+    for (int k = 0; k < 2 * n; k++) {
+      int i = Math.floorMod(start - 1 - k, n);
+      int next = (i + 1) % n;
+      double stoppable = Math.sqrt(v[next] * v[next] + 2.0 * config.getAbrake() * segmentLengths[i]);
+      if (stoppable < v[i]) {
+        v[i] = stoppable;
       }
     }
 

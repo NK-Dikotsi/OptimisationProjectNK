@@ -83,11 +83,11 @@
   <!-- Algorithm loggers -->
   <logger name="za.ac.uj.racinglines.pso" level="INFO"/>
   <logger name="za.ac.uj.racinglines.aco" level="INFO"/>
-  <logger name="za.ac.uj.racinglines.variant" level="DEBUG"/>
+  <logger name="za.ac.uj.racinglines.variant" level="INFO"/>
 
   <!-- Physics and track loggers -->
-  <logger name="za.ac.uj.racinglines.physics" level="DEBUG"/>
-  <logger name="za.ac.uj.racinglines.track" level="DEBUG"/>
+  <logger name="za.ac.uj.racinglines.physics" level="INFO"/>
+  <logger name="za.ac.uj.racinglines.track" level="INFO"/>
 
   <!-- Experiment and analysis loggers -->
   <logger name="za.ac.uj.racinglines.experiment" level="INFO"/>
