@@ -1,0 +1,15 @@
+TUM Racetrack Database - License Information
+
+The Spielberg track geometry and reference race line data are provided from the
+TUM racetrack database, developed by the Technical University of Munich (TUMFTM).
+
+Source: https://github.com/TUMFTM/racetrack-database
+License: GNU LGPL v3
+
+Reference:
+- Heilmeier, A., Wischnewski, A., Hermansdorfer, L., Betz, J., Lienkamp, M., & Lohmann, B. (2020).
+  Minimum curvature trajectory planning and control for an autonomous race car.
+  Vehicle System Dynamics, 58(10), 1497-1527.
+
+The data may be used according to the terms of the GNU LGPL v3 license.
+Please cite the TUMFTM racetrack database and the reference publication above when using this data.
