@@ -17,3 +17,8 @@ Thumbs.db
 
 # Experiment outputs (can be regenerated)
 runs/
+
+# Generated files
+*.log
+dependency-reduced-pom.xml
+.jqwik-database
